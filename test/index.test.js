@@ -1,26 +1,56 @@
-import arrayToObjectKeys from "../dist"
+import path from "path"
 
-it("should run with 1 argument", () => {
-  const result = arrayToObjectKeys(["a", "b"])
-  expect(result).toEqual({
-    a: null,
-    b: null,
+import resolvePkgOption, {sync as resolvePkgOptionSync} from "../src"
+
+it("should get normalized", () => {
+  const result = resolvePkgOptionSync({
+    name: "test ",
+    version: " 1.2.3",
+  })
+  expect(result).toMatchObject({
+    pkg: {
+      name: "test",
+      version: "1.2.3",
+    },
+    path: false,
   })
 })
 
-it("should run with an integer as second argument", () => {
-  const result = arrayToObjectKeys(["a", "b"], 7)
-  expect(result).toEqual({
-    a: 7,
-    b: 7,
+it("should run async", async () => {
+  const result = await resolvePkgOption({
+    name: "test",
+  })
+  expect(result).toMatchObject({
+    pkg: {
+      name: "test",
+    },
+    path: false,
   })
 })
 
-it("should run with a function as second argument", () => {
-  const valueGenerator = (key, index) => `${index + 1}-${key}-x`
-  const result = arrayToObjectKeys(["a", "b"], valueGenerator)
-  expect(result).toEqual({
-    a: "1-a-x",
-    b: "2-b-x",
+it("should find the package.json of this module", () => {
+  const result = resolvePkgOptionSync(path.resolve(__dirname, ".."))
+  expect(result).toMatchObject({
+    pkg: {
+      author: {
+        name: "Jaid",
+        email: "jaid.jsx@gmail.com",
+        url: "https://github.com/Jaid",
+      },
+      babel: {
+        presets: ["jaid"],
+      },
+    },
+  })
+})
+
+it("should find a json5 package", () => {
+  const result = resolvePkgOptionSync(__dirname)
+  debugger
+  expect(result).toMatchObject({
+    path: expect.stringMatching(/package\.json5$/),
+    pkg: {
+      name: "is-json5",
+    },
   })
 })
