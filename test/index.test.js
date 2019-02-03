@@ -46,7 +46,6 @@ it("should find the package.json of this module", () => {
 
 it("should find a json5 package", () => {
   const result = resolvePkgOptionSync(__dirname)
-  debugger
   expect(result).toMatchObject({
     path: expect.stringMatching(/package\.json5$/),
     pkg: {
