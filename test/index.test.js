@@ -1,6 +1,8 @@
 import path from "path"
 
-import resolvePkgOption, {sync as resolvePkgOptionSync} from "../src"
+const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
+const {default: resolvePkgOption,
+  sync: resolvePkgOptionSync} = indexModule
 
 it("should get normalized", () => {
   const result = resolvePkgOptionSync({
