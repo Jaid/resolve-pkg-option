@@ -25,7 +25,7 @@ jobs:
           file:
             - dist/package.json
             - dist/license.*
-            - dist/*.d.ts
+            #- dist/*.d.ts
             - "*.zip"
           skip_cleanup: true
           name: $PKG_NAME $PKG_VERSION
