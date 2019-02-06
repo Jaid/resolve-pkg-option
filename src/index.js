@@ -41,7 +41,7 @@ export const sync = (pkg, options) => {
     if (options.normalize) {
       normalizePackageData(pkgData)
     }
-    return pkgData
+    return {...pkgData}
   }
   if (typeof pkg === "object") {
     return {
