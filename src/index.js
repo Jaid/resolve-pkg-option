@@ -38,10 +38,11 @@ export const sync = (pkg, options) => {
     ...options,
   }
   const transform = pkgData => {
+    const transformedPkgData = {...pkgData}
     if (options.normalize) {
-      normalizePackageData(pkgData)
+      normalizePackageData(transformedPkgData)
     }
-    return {...pkgData}
+    return transformedPkgData
   }
   if (typeof pkg === "object") {
     return {
