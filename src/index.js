@@ -87,6 +87,7 @@ export const sync = (pkg, options) => {
 /**
  * Loads a package.json or prepares given pkg data
  * @async
+ * @function default
  * @param {object|string} pkg Either a path where the package.json is searched at, or pkg data as an object
  * @param {options} options Resolving options
  * @returns {Promise<result>} Resolving result with package data and an optional file path
