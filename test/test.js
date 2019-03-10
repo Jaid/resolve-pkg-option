@@ -39,9 +39,6 @@ it("should find the package.json of this module", () => {
         email: "jaid.jsx@gmail.com",
         url: "https://github.com/Jaid",
       },
-      babel: {
-        presets: ["jaid"],
-      },
     },
   })
 })
