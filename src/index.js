@@ -12,12 +12,14 @@
  * @type {object}
  * @property {boolean} [normalize=true] Apply normalize-package-data
  * @property {boolean} [json5=true] Parse package.json with json5
+ * @property {boolean} [preventDependencyCopy=true] Prevents `pkg.optionalDependencies` from getting copied to `pkg.dependencies` by normalize-package-data, see: https://github.com/npm/normalize-package-data/issues/91
  */
 
 import fs from "graceful-fs"
 import normalizePackageData from "normalize-package-data"
 import json5 from "json5"
 import findupSync from "findup-sync"
+import {isObject, omit} from "lodash"
 
 /**
  * Loads a package.json or prepares given pkg data
@@ -34,6 +36,7 @@ import findupSync from "findup-sync"
 export const sync = (pkg, options) => {
   options = {
     normalize: true,
+    preventDependencyCopy: true,
     json5: true,
     ...options,
   }
@@ -41,6 +44,11 @@ export const sync = (pkg, options) => {
     const transformedPkgData = {...pkgData}
     if (options.normalize) {
       normalizePackageData(transformedPkgData)
+      if (options.preventDependencyCopy) {
+        if (transformedPkgData.optionalDependencies |> isObject) {
+          transformedPkgData.dependencies = omit(transformedPkgData.dependencies, Object.keys(transformedPkgData.optionalDependencies))
+        }
+      }
     }
     return transformedPkgData
   }
