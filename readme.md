@@ -3,6 +3,15 @@
 
 Returns a normalized node package representation by either specifying an object or a file path.
 
+## Installation
+<a href='https://npmjs.com/package/resolve-pkg-option'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+```bash
+npm install --save resolve-pkg-option@^
+```
+<a href='https://yarnpkg.com/package/resolve-pkg-option'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+```bash
+yarn add resolve-pkg-option@^
+```
 
 
 ## Try it out
