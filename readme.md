@@ -1,68 +1,68 @@
 # resolve-pkg-option
 
 
-Returns a normalized node package representation by either specifying an object or a file path.
+<a href="https://raw.githubusercontent.com/Jaid/resolve-pkg-option/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/resolve-pkg-option?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/resolve-pkg-option/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fresolve-pkg-option%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/commits"><img src="https://img.shields.io/github/commits-since/Jaid/resolve-pkg-option/v1.0.8?style=flat-square&logo=github" alt="Commits since v1.0.8"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/commits"><img src="https://img.shields.io/github/last-commit/Jaid/resolve-pkg-option?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/issues"><img src="https://img.shields.io/github/issues/Jaid/resolve-pkg-option?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/npm/v/resolve-pkg-option?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/resolve-pkg-option?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/npm/dm/resolve-pkg-option?style=flat-square&logo=npm" alt="Downloads"/></a>
+
+**Returns a normalized node package representation by either specifying an object or a file path.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Installation
-<a href='https://npmjs.com/package/resolve-pkg-option'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/badge/npm-resolve--pkg--option-C23039?style=flat-square&logo=npm" alt="resolve-pkg-option on npm"/></a>
 ```bash
 npm install --save resolve-pkg-option@^1.0.8
 ```
-<a href='https://yarnpkg.com/package/resolve-pkg-option'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/resolve-pkg-option"><img src="https://img.shields.io/badge/Yarn-resolve--pkg--option-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="resolve-pkg-option on Yarn"/></a>
 ```bash
 yarn add resolve-pkg-option@^1.0.8
 ```
 
 
 
-## Documentation
 
-* [resolve-pkg-option](#module_resolve-pkg-option)
-    * [~default(pkg, options)](#module_resolve-pkg-option..default) ⇒ <code>Promise.&lt;result&gt;</code>
-    * [~result](#module_resolve-pkg-option..result) : <code>object</code>
-    * [~options](#module_resolve-pkg-option..options) : <code>object</code>
 
-Loads a package.json or prepares given pkg data
 
-**Kind**: inner method of [<code>resolve-pkg-option</code>](#module_resolve-pkg-option)  
-**Returns**: <code>Promise.&lt;result&gt;</code> - Resolving result with package data and an optional file path
-resolvePkgOption({name: " test"})
-// { path: false, pkg: {name: "test"} }  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| pkg | <code>object</code> \| <code>string</code> | Either a path where the package.json is searched at, or pkg data as an object |
-| options | <code>options</code> | Resolving options |
 
-**Example**  
-```javascript
-resolvePkgOption({name: " test"}, {normalize: false})
-// { path: false, pkg: {name: " test"} }
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/resolve-pkg-option.git
+cd resolve-pkg-option
+npm install
 ```
-**Kind**: inner typedef of [<code>resolve-pkg-option</code>](#module_resolve-pkg-option)  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| pkg | <code>object</code> | The final pkg data |
-| path | <code>string</code> \| <code>false</code> | The file path where the pkg data got loaded from |
-
-**Kind**: inner typedef of [<code>resolve-pkg-option</code>](#module_resolve-pkg-option)  
-**Properties**
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| [normalize] | <code>boolean</code> | <code>true</code> | Apply normalize-package-data |
-| [json5] | <code>boolean</code> | <code>true</code> | Parse package.json with json5 |
-| [preventDependencyCopy] | <code>boolean</code> | <code>true</code> | Prevents `pkg.optionalDependencies` from getting copied to `pkg.dependencies` by normalize-package-data, see: https://github.com/npm/normalize-package-data/issues/91 |
-
+Testing:
+```bash
+npm run test:dev
+```
+Testing in production environment:
+```bash
+npm run test
+```
 
 
 ## License
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
