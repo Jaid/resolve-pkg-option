@@ -36,5 +36,9 @@
   },
   "name": "resolve-pkg-option",
   "description": "Returns a normalized node package representation by either specifying an object or a file path.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/resolve-pkg-option"
+  }
 }
