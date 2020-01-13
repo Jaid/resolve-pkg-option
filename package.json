@@ -35,5 +35,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "resolve-pkg-option",
-  "description": "Returns a normalized node package representation by either specifying an object or a file path."
+  "description": "Returns a normalized node package representation by either specifying an object or a file path.",
+  "funding": "https://github.com/sponsors/jaid"
 }
