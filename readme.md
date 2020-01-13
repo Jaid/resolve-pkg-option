@@ -1,9 +1,9 @@
 # resolve-pkg-option
 
 
-<a href="https://raw.githubusercontent.com/Jaid/resolve-pkg-option/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/resolve-pkg-option?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/resolve-pkg-option/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fresolve-pkg-option%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/commits"><img src="https://img.shields.io/github/commits-since/Jaid/resolve-pkg-option/v1.0.8?style=flat-square&logo=github" alt="Commits since v1.0.8"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/commits"><img src="https://img.shields.io/github/last-commit/Jaid/resolve-pkg-option?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/issues"><img src="https://img.shields.io/github/issues/Jaid/resolve-pkg-option?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/npm/v/resolve-pkg-option?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/resolve-pkg-option/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/resolve-pkg-option?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/npm/dm/resolve-pkg-option?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/resolve-pkg-option/master/license.txt"><img src="https://img.shields.io/github/license/jaid/resolve-pkg-option?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor resolve-pkg-option"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/resolve-pkg-option/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fresolve-pkg-option%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/resolve-pkg-option/commits"><img src="https://img.shields.io/github/commits-since/jaid/resolve-pkg-option/v1.0.8?style=flat-square&logo=github" alt="Commits since v1.0.8"/></a> <a href="https://github.com/jaid/resolve-pkg-option/commits"><img src="https://img.shields.io/github/last-commit/jaid/resolve-pkg-option?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/resolve-pkg-option/issues"><img src="https://img.shields.io/github/issues/jaid/resolve-pkg-option?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/npm/v/resolve-pkg-option?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/resolve-pkg-option/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/resolve-pkg-option?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/resolve-pkg-option"><img src="https://img.shields.io/npm/dm/resolve-pkg-option?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Returns a normalized node package representation by either specifying an object or a file path.**
 
@@ -37,14 +37,13 @@ yarn add resolve-pkg-option@^1.0.8
 
 
 
-
 ## Development
 
 
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/resolve-pkg-option.git
+git clone git@github.com:jaid/resolve-pkg-option.git
 cd resolve-pkg-option
 npm install
 ```
