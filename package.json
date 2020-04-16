@@ -40,5 +40,23 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/resolve-pkg-option"
-  }
+  },
+  "homepage": "https://github.com/jaid/resolve-pkg-option",
+  "keywords": [
+    "argument",
+    "node",
+    "node-package",
+    "normalize",
+    "npm",
+    "option",
+    "package",
+    "package-data",
+    "package-json",
+    "parameter",
+    "parse-option",
+    "pkg",
+    "pkg-data",
+    "resolve",
+    "util"
+  ]
 }
